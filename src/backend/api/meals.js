@@ -53,13 +53,13 @@ router.post("/", async (request, response) => {
  
     const newMeal=await knex('meals')
                       .insert({
-                      tittle: 'lahori karahi',
-                      description: 'lahori karahi from Pakistan',
-                      location: 'Odense',
+                      tittle:  request.body.tittle,
+                      description:  request.body.description,
+                      location:  request.body.location,
                       when: new Date(),
-                      max_reservations: 7,
-                      price: 190,
-                      created_date: new Date(),
+                      max_reservations:  request.body.maxReservations,
+                      price:  request.body.price,
+                      created_date:  request.body.createdDate,
 
     });
     response.json(newMeal);
@@ -86,8 +86,8 @@ router.put("/:id", async (request, response)=>{
 try {
   const updatedMeal=await knex("meals")
                     .where({id:parseInt(request.params.id)})
-                    .update({tittle:'italian pasta',
-                             description:'yummy italian pasta',});
+                    .update({tittle:request.body.tittle,
+                             description: request.body.description,});
    response.json(updatedMeal);
 }catch(error){
   throw error;
