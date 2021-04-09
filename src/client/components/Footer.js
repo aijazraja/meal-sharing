@@ -25,16 +25,16 @@ export default function Footer() {
         <div className="footerSmIcons">
         <h3>Follow us</h3>
           <a href="">
-            <img src="./src/client/assets/images/fb.png" alt="facebook" />
+            <img src="https://i.ibb.co/SszC8xr/fb.png"  alt="facebook" />
           </a>
           <a href="">
-            <img src="./src/client/assets/images/twitter.png" alt="twitter" />
+            <img src="https://i.ibb.co/XDSQM3W/twitter.png" alt="twitter" />
           </a>
           <a href="">
-            <img src="./src/client/assets/images/linkedin.png" alt="linkedin" />
+            <img src="https://i.ibb.co/Qrbmfcy/linkedin.png" alt="linkedin" />
           </a>
           <a href="">
-            <img src="./src/client/assets/images/insta.png" alt="instagram" />
+            <img src="https://i.ibb.co/jWMP8rV/insta.png" alt="instagram" />
           </a>
           <div>
             <h5>@Copyright / Developed by Aijaz Ahmad</h5>

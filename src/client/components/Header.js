@@ -8,7 +8,7 @@ export default function Header({ meals }) {
       <div className="headerLogo">
       <Link to="/">
                 <img
-                  src="./src/client/assets/images/logo1.jpg"
+                  src="https://i.ibb.co/g3QxRfJ/logo1.jpg"
                   width="100px"
                   height="100px"
                   alt="logo"

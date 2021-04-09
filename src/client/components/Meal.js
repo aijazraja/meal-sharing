@@ -26,12 +26,18 @@ export default function Meal({ meals }) {
     <div className="mealTop">
       {meal && (
         <div>
-          <img
-            src={`./src/client/assets/images/${meal.tittle}.jpg`}
+        <img
+            src="https://i.ibb.co/q0g2nyT/Fish.jpg"
             width="250px"
             height="225px"
             alt={meal.tittle}
           />
+          {/* <img
+            src={`./src/client/assets/images/${meal.tittle}.jpg`}
+            width="250px"
+            height="225px"
+            alt={meal.tittle}
+          /> */}
 
           <h3>{meal.tittle}</h3>
           <p>{meal.description}</p>
