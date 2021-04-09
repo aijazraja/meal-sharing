@@ -30,7 +30,12 @@ let imageUrlArray=[
   "https://i.ibb.co/7rC9wn7/Hamburger.jpg",
   "https://i.ibb.co/sw5HWm5/Sandwich.jpg",
   "https://i.ibb.co/3h84QSB/Seafood.jpg",
-  "https://i.ibb.co/8sF1nLx/Kebab.jpg"
+  "https://i.ibb.co/8sF1nLx/Kebab.jpg",
+  "https://i.ibb.co/K6zPNV1/lahori-karahi.jpg",
+  "https://i.ibb.co/5Rfk8hZ/karachi-biryani.jpg",
+  "https://i.ibb.co/60nTPwP/Roast-chicken.jpg",
+  "https://i.ibb.co/q0g2nyT/Fish.jpg" ,
+  "https://i.ibb.co/3h84QSB/Seafood.jpg"
 
   ]
 
