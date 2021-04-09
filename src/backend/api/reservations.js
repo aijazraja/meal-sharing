@@ -13,15 +13,9 @@ router.get("/", async (request, response) => {
 
 
 router.post("/", async (request, response)=>{
-const newReservation=await knex('reservation')
-                       .insert({
-                        'number_of_guests':4,
-                        'created_date':new Date(),
-                        'contact_phonenumber':4342345,
-                        'contact_name':'waleed ahmad',
-                        'contact_email':'jazi@ramil.com',
-                        'meal_id':3,
-                      });
+const newReservation=await knex('reservation').insert(request.body);
+                       
+                      
 response.json('Reservation added');
 });
 
