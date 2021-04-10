@@ -26,7 +26,7 @@ router.get("/", async (request, response) => {
      }
      else if(request.query.availableReservations){
       const mealsWithReservations=await knex('meals')
-                          .where("max_reservations", ">", 0) ;
+                          .where("max_reservations", ">", 5) ;
                           
       response.json(mealsWithReservations);  
      }
@@ -52,16 +52,7 @@ router.post("/", async (request, response) => {
   try {
  
     const newMeal=await knex('meals')
-                      .insert({
-                      tittle:  request.body.tittle,
-                      description:  request.body.description,
-                      location:  request.body.location,
-                      when: new Date(),
-                      max_reservations:  request.body.maxReservations,
-                      price:  request.body.price,
-                      created_date:  request.body.createdDate,
-
-    });
+                      .insert(request.body);
     response.json(newMeal);
   } catch (error) {
     throw error;
@@ -107,5 +98,28 @@ router.delete("/:id", async (request, response)=>{
     throw error;
   }
 });
+/* getMealsavailableReservations: async (current) => {
+  const meals = await knex
+    .select("meals.*")
+    .from("meals")
+    .join(
+      knex("meals")
+        .select({ id: "meals.id" }, "meals.max_reservations")
+        .from("meals")
+        .join("reservations", function () {
+          this.on("meals.id", "=", "reservations.meal_id");
+        })
+        .sum({ sum: ["reservations.number_of_guests"] })
+        .groupBy("meals.id")
+        .as("M_R"),
+      function () {
+        this.on("meals.max_reservations", ">", "M_R.sum");
+        // this.on("M_R.id", "=", "meals.id").andOn(
+        //   "meals.max_reservations",
+        //   ">",
+        //   "M_R.sum"
+        // );
+      }
+    ); */
 
 module.exports = router;
